@@ -1,0 +1,292 @@
+:root {
+    --side-nav-bg: rgb(243, 243, 243);
+    --main-bg: rgb(249, 249, 249);
+    --light-item-bg: rgb(253, 253, 253);
+    --common-border: rgb(193, 193, 193);
+    --common-detail: rgb(0, 122, 255);
+    --main-text-color: rgb(51, 51, 51);
+}
+
+/* :root {
+    --side-nav-bg: rgb(234, 234, 234);
+    --main-bg: rgb(248, 248, 248);
+    --light-item-bg: rgb(253, 253, 253);
+    --common-detail: rgb(0, 122, 255);
+} */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Montserrat', 'Noto sans', 'Open sans';
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    overflow-y: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+#top-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+#side-navbar {
+    /* grid-column: 1 / span 2; */
+    /* grid-row: 1; */
+    height: calc(100% - 24px);
+    width: 250px;
+    background-color: var(--side-nav-bg);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    /* grid-column: 3 / span 12; */
+    /* grid-row: 1; */
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+}
+
+.side-nav-item {
+    background-color: transparent;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 35px;
+    width: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 14px;
+    letter-spacing: 0.04rem;
+}
+
+.side-nav-item:hover {
+    background-color: #ededed;
+}
+
+.side-nav-item.selected {
+    font-weight: 600;
+}
+
+.side-nav-item > .icon-container {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-nav-item > .icon-container > img {
+    height: 100%;
+    width: 100%;
+}
+
+.side-nav-item > .content-container {
+    margin-left: 16px;
+}
+
+.side-nav-logo-container {
+    padding-left: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.side-nav-logo-container > p {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#side-navbar-bottom > .side-nav-item {
+    gap: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#side-nav-settings-container > img {
+    height: 20px;
+    width: 20px;
+}
+
+#side-nav-prof-pic-container {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
+
+/* Style main content for ClassroomPage */
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 12px;
+    margin: 15px;
+}
+
+#classroom-headline {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+#dashboard-classroom-link {
+    grid-column: 7 / span 4;
+    grid-row: 8 / span 2;
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 4px 9px 1px rgba(0,0,0, 0.07);
+}
+
+#dashboard-classroom-link > p {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#dashboard-mixed-questions {
+    grid-column: 1 / span 6;
+    grid-row: 2 / span 2;
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 4px 9px 1px rgba(0,0,0, 0.07);
+}
+
+#dashboard-mixed-questions > p {
+    display: block;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+}
+
+#dashboard-four-exercises {
+    grid-column: 1 / span 6;
+    grid-row: 4 / span 6;
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 4px 9px 1px rgba(0,0,0, 0.07);
+}
+
+#dashboard-four-exercises > h2 {
+    margin: 7px 0;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.four-grid-container {
+    /* height: calc(100% - 20px); */
+    width: calc(100% - 20px);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+}
+
+#dashboard-four-exercises > .four-grid-container > .exercise-box {
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 3px 4px 9px 1px rgba(0,0,0, 0.07);
+}
+
+#dashboard-four-exercises > .four-grid-container > .exercise-box:nth-of-type(1) {
+    /* background-color: var(--common-detail); */
+    border: 2px solid var(--common-detail);
+    /* color: #f9f9f9; */
+}
+
+#dashboard-four-exercises > .four-grid-container > .exercise-box > h4 {
+    margin: 0;
+}
+
+#dashboard-four-exercises > .four-grid-container > .exercise-box > p {
+    margin: 0;
+    margin-top: 7px;
+}
+
+#dashboard-event-list {
+    grid-column: 7 / span 4;
+    grid-row: 2 / span 6;
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 3px 4px 9px 1px rgba(0,0,0, 0.07);
+}
+
+#dashboard-event-list > h2 {
+    margin: 7px 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#dashboard-event-list > .event-list > .event-list-item {
+    width: calc(100% - 20px);
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 2px 5px 1px rgba(0,0,0, 0.09);
+}
+
+#dashboard-event-list > .event-list > .event-list-item.highlighted {
+    /* background-color: var(--common-detail); */
+    border: 2px solid var(--common-detail);
+    /* color: var(--light-item-bg); */
+}
+
+#dashboard-event-list > .event-list > .event-list-item > p {
+    margin: 0;
+}
+
+/* Streak & victories container */
+.result-container {
+    grid-row: 10 / span 3;
+    background-color: var(--light-item-bg);
+    border: 1px solid var(--common-border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 4px 9px 1px rgba(0,0,0, 0.07);
+}
+
+#streak-container {
+    grid-column: 7 / span 3;
+}
+
+#victories-container {
+    grid-column: 10 / span 3;
+}
+
+.image-container {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+

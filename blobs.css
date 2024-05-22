@@ -1,0 +1,61 @@
+:root {
+    --brandeis-blue: rgb(0, 122, 255);
+    --bitter-sweet: #247b7b;
+    --light-sea-green: #0CA4A5;
+    --secondary-color: #35A2DA;
+}
+
+.blob-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.blob {
+    position: absolute;
+}
+
+#top-right-blue {
+    width: 450px;
+    height: 450px;
+    top: -225px;
+    right: -225px;
+    background-color: var(--brandeis-blue);
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.35;
+}
+
+#center-right-blue {
+    width: 100px;
+    height: 100px;
+    top: 50vh;
+    right: calc(50vw - 100px);
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.35;
+}
+
+#bottom-leftish-blue {
+    width: 250px;
+    height: 250px;
+    top: 80vh;
+    left: 100px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.35;
+}
+
+#right-bitter-sweet {
+    width: 250px;
+    height: 250px;
+    top: 60vh;
+    right: 60px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.35;
+}

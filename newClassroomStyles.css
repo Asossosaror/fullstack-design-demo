@@ -1,0 +1,44 @@
+#side-navbar {
+    width: 45px;
+}
+
+#side-nav-prof-pic-container {
+    height: 22px;
+    width: 22px;
+    background-color: rgba(47, 47, 47, 0.407);
+    border-radius: 50%;
+}
+
+#classroom-headline > h1 {
+    font-size: 26px;
+}
+
+#post-flow-outer-container {
+    grid-column: 4 / span 6;
+    grid-row: 2 / span 11;
+}
+
+#post-flow-container {
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    /* Make inset box-shadow on top */
+}
+
+#post-flow {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    height: fit-content;
+}
+
+.post-box {
+    height: 75px;
+    width: calc(100% - 40px);
+    background-color: tomato;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
